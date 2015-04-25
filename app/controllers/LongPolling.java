@@ -11,6 +11,7 @@ import play.mvc.*;
 import static akka.pattern.Patterns.ask;
 
 import java.util.*;
+import views.html.long_polling.display;
 
 public class LongPolling extends Controller {
 
@@ -43,6 +44,11 @@ public class LongPolling extends Controller {
                 }
             }
         });
+    }
+
+    public static Result display(Integer key) {
+        Logger.info("display for key: " + key);
+        return ok(display.render(key));
     }
 
 

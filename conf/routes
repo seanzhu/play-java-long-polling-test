@@ -8,7 +8,7 @@ GET        /                               controllers.Application.index()
 # Long polling
 GET        /polling/set/:key/:value        controllers.LongPolling.set(key: Integer, value: Integer)
 GET        /polling/poll/:key              controllers.LongPolling.polling(key: Integer)
-
+GET        /polling/display/:key           controllers.LongPolling.display(key: Integer)
 
 
 # Map static resources from the /public folder to the /assets URL path
